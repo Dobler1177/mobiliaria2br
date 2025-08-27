@@ -289,8 +289,12 @@
   <!-- Sección de métodos de pago -->
   <section id="pagos">
     <h2>Formas de Pago</h2>
-    <p>Aceptamos pagos en pesos colombianos, dólares o euros mediante nuestras cuentas bancarias y plataformas de pago.</p>
-    <img src="ada7c173-2a81-490b-ad7e-56e8ca192582.png" alt="Información de pagos" style="max-width:100%;height:auto;border-radius:8px;">
+    <!-- Botón para mostrar u ocultar los detalles de pago -->
+    <button id="toggle-pago" class="btn">Mostrar Información de Pago</button>
+    <div id="pago-detalle" style="display:none;margin-top:1rem;">
+      <p>Aceptamos pagos en pesos colombianos, dólares o euros mediante nuestras cuentas bancarias y plataformas de pago.</p>
+      <img src="ada7c173-2a81-490b-ad7e-56e8ca192582.png" alt="Información de pagos" style="max-width:100%;height:auto;border-radius:8px;">
+    </div>
   </section>
 
   <!-- Galería de camas reales -->
@@ -299,11 +303,21 @@
     <div class="gallery-grid">
       <img src="65a0bc42-35f2-4667-970a-69d64aa990b1.png" alt="Cama de lujo 1">
       <img src="79d9e59a-ba41-438a-8c12-8fbb2b8131f0.png" alt="Cama de lujo 2">
-      <img src="216a59fb-be21-474e-8cdf-c34d720ab0a0.png" alt="Cama de lujo 3">
-      <img src="315e6c28-7bb9-41da-a3c6-601845cfa406.png" alt="Cama de lujo 4">
-      <img src="3733da60-0db4-44c7-8c55-9ad825694163.png" alt="Cama de lujo 5">
-      <img src="6228a418-b868-4b12-8c72-75d9a95fbf66.png" alt="Cama de lujo 6">
-      <img src="339658dd-e961-4191-9b6a-1d73467b310e.png" alt="Cama de lujo 7">
+      <img src="315e6c28-7bb9-41da-a3c6-601845cfa406.png" alt="Cama de lujo 3">
+      <img src="3733da60-0db4-44c7-8c55-9ad825694163.png" alt="Cama de lujo 4">
+      <img src="6228a418-b868-4b12-8c72-75d9a95fbf66.png" alt="Cama de lujo 5">
+      <img src="339658dd-e961-4191-9b6a-1d73467b310e.png" alt="Cama de lujo 6">
+      <!-- Nuevas imágenes de camas -->
+      <img src="3bf82200-96cb-43c3-9633-7cf75f10d51d.png" alt="Cama de lujo 7">
+      <img src="5c04fc45-baf7-4699-9dd3-d178de940ff7.png" alt="Cama de lujo 8">
+      <img src="17f0841b-a59b-4c61-95f9-7a9b33e8672f.png" alt="Cama de lujo 9">
+      <img src="ae9dd0ed-016f-489f-adc9-b57d80d5cff2.png" alt="Cama de lujo 10">
+      <img src="5aa194dd-08dd-42c1-b053-548870a7b195.png" alt="Cama de lujo 11">
+      <img src="513b4ea7-bd99-4c99-bf3a-f6bacbf602d7.png" alt="Cama de lujo 12">
+      <img src="d301809c-0504-491b-bd91-d3f8914c4937.png" alt="Cama de lujo 13">
+      <img src="89f18174-3dcb-4e05-8942-e09e447ef9d0.png" alt="Cama de lujo 14">
+      <img src="688fba2d-9b36-42a2-ae2c-8cfdd2734c56.png" alt="Cama de lujo 15">
+      <img src="ab1d1c91-64b0-4327-9c1e-e4c30223105c.png" alt="Cama de lujo 16">
     </div>
   </section>
 
@@ -386,6 +400,21 @@ const DOBLER = {
   `;
   document.head.appendChild(style);
 })();
+</script>
+
+<!-- Script para mostrar/ocultar los detalles de pago -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const togglePagoBtn = document.getElementById('toggle-pago');
+  const pagoDetalle = document.getElementById('pago-detalle');
+  if (togglePagoBtn && pagoDetalle) {
+    togglePagoBtn.addEventListener('click', function() {
+      const isHidden = pagoDetalle.style.display === 'none' || pagoDetalle.style.display === '';
+      pagoDetalle.style.display = isHidden ? 'block' : 'none';
+      togglePagoBtn.textContent = isHidden ? 'Ocultar Información de Pago' : 'Mostrar Información de Pago';
+    });
+  }
+});
 </script>
 
 <!-- Script para el carrusel de cunas -->
