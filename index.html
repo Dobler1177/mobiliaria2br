@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobiliaria Doble R - Diseño que Impone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<style>
+:root {
+  --gold: #d4af37;
+  --dark: #111;
+  --mid: #222;
+  --light: #333;
+  --text: #f5f5f5;
+}
+body { margin:0; font-family: 'Times New Roman', serif; background: var(--dark); color: var(--text); text-align:center; }
+header { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background: var(--mid); border-bottom:2px solid var(--gold); position:sticky; top:0; z-index:100; }
+header .logo { font-size:1.5rem; color: var(--gold); }
+nav ul { list-style:none; display:flex; gap:1.5rem; margin:0; padding:0; }
+nav a { color:var(--text); text-decoration:none; font-weight:bold; }
+nav a:hover { color:var(--gold); }
+.hero { position:relative; height:80vh; overflow:hidden; }
+.hero-track { display:flex; width:400%; height:100%; animation:slide 32s infinite; }
+.hero-track img { width:100%; height:100%; object-fit:cover; }
+@keyframes slide {
+  0% { transform:translateX(0%); } 20%{ transform:translateX(0%);} 25%{ transform:translateX(-100%);} 45%{ transform:translateX(-100%);} 50%{ transform:translateX(-200%);} 70%{ transform:translateX(-200%);} 75%{ transform:translateX(-300%);} 95%{ transform:translateX(-300%);} 100%{ transform:translateX(0%); }
+}
+.hero-text { position:absolute; inset:0; display:grid; place-items:center; z-index:1; }
+.hero-text h1 { font-size:3rem; color:var(--gold); margin-bottom:1rem; }
+.hero-text p { font-size:1.2rem; }
+section { padding:3rem 1rem; }
+#categorias .category-grid { display:flex; justify-content:center; gap:2rem; flex-wrap:wrap; }
+.category-card { width:250px; background: var(--mid); padding:1rem; border-radius:8px; box-shadow: 0 2px 4px rgba(0,0,0,0.3); color: var(--text); }
+footer { background: var(--mid); border-top:2px solid var(--gold); padding:1rem; margin-top:2rem; }
+.btn { background: var(--gold); color: var(--dark); padding:.75rem 1.5rem; border-radius:4px; text-decoration:none; display:inline-block; }
+.btn:hover { opacity:0.9; }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Mobiliaria Doble R</div>
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#categorias">Productos</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+<section id="inicio" class="hero">
+  <div class="hero-track">
+    <img src="https://images.unsplash.com/photo-1616627562174-c6d8b58ece2c?auto=format&fit=crop&w=1600&q=80" alt="Sala 1">
+    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80" alt="Sala 2">
+    <img src="https://images.unsplash.com/photo-1615874959474-d609969a2d5a?auto=format&fit=crop&w=1600&q=80" alt="Sala 3">
+    <img src="https://images.unsplash.com/photo-1617093642636-b89e0ee0d3f4?auto=format&fit=crop&w=1600&q=80" alt="Sala 4">
+  </div>
+  <div class="hero-text">
+    <h1>Diseño que Impone</h1>
+    <p>Calidad y elegancia para tu hogar</p>
+  </div>
+</section>
+<main>
+<section id="categorias">
+  <h2>Nuestros Productos</h2>
+  <div class="category-grid">
+    <div class="category-card">
+      <i class="fas fa-couch fa-3x"></i>
+      <h3>Salas</h3>
+      <p>Sofás y conjuntos de sala elegantes y confortables.</p>
+    </div>
+    <div class="category-card">
+      <i class="fas fa-bed fa-3x"></i>
+      <h3>Camas</h3>
+      <p>Camas y dormitorios de lujo para un descanso placentero.</p>
+    </div>
+    <div class="category-card">
+      <i class="fas fa-chair fa-3x"></i>
+      <h3>Comedores</h3>
+      <p>Mesas y sillas de comedor con estilos modernos y clásicos.</p>
+    </div>
+  </div>
+</section>
+<section id="nosotros">
+  <h2>Sobre Nosotros</h2>
+  <p>Somos una fábrica colombiana especializada en muebles de alta calidad. Nuestro objetivo es ofrecer diseños modernos y duraderos que realcen la belleza de tu hogar, manteniendo precios accesibles y un servicio excepcional.</p>
+  <p><strong>Calidad Premium:</strong> Utilizamos materiales de primera y procesos de fabricación certificados.</p>
+  <p><strong>Diseños Exclusivos:</strong> Combinamos elegancia y funcionalidad en cada mueble.</p>
+  <p><strong>Precios Competitivos:</strong> Al ser fabricantes, ofrecemos precios directos sin intermediarios.</p>
+  <p><strong>Envío a Todo el País:</strong> Hacemos llegar nuestros productos a cualquier lugar de Colombia de forma segura.</p>
+</section>
+<section id="contacto">
+  <h2>Contáctanos</h2>
+  <p>¿Listo para amueblar tu espacio con lujo y confort? Escríbenos o visítanos en nuestro punto de fábrica.</p>
+  <div class="contact-info">
+    <p><span class="fas fa-map-marker-alt"></span> Cimitarra, Santander – Magdalena Medio</p>
+    <p><span class="fas fa-phone-alt"></span> +57 310 500 6352</p>
+    <p><span class="fas fa-envelope"></span> dobler1177@icloud.com</p>
+    <a href="https://wa.me/573105006352?text=Hola%2C%20estoy%20interesado%20en%20el%20cat%C3%A1logo" class="btn">Chatea por WhatsApp</a>
+  </div>
+</section>
+</main>
+<footer>
+  <p>&copy; 2025 Mobiliaria Doble R. Todos los derechos reservados.</p>
+</footer>
+<script>
+const DOBLER = {
+  phone: "573105006352",
+  email: "dobler1177@icloud.com",
+  logoUrl: "https://raw.githubusercontent.com/dobler1177/mobiliaria2br/main/logo.png",
+  whatsappMsg: "Hola, estoy interesado en el catálogo"
+};
+(function addFavicon(){
+  if (!document.querySelector('link[rel="icon"]')) {
+    const l=document.createElement('link');
+    l.rel='icon'; l.type='image/png'; l.href=DOBLER.logoUrl;
+    document.head.appendChild(l);
+  }
+})();
+(function addWatermark(){
+  if (document.querySelector('.dobler-watermark')) return;
+  const w=document.createElement('div');
+  w.className='dobler-watermark';
+  const img=document.createElement('img');
+  img.src=DOBLER.logoUrl; img.alt='Mobiliaria Doble R';
+  w.appendChild(img);
+  document.body.appendChild(w);
+})();
+(function addWhatsApp(){
+  if (document.querySelector('.dobler-wa')) return;
+  const a=document.createElement('a');
+  const msg=encodeURIComponent(DOBLER.whatsappMsg);
+  a.className='dobler-wa';
+  a.href=`https://wa.me/${DOBLER.phone}?text=${msg}`;
+  a.target='_blank';
+  a.rel='noopener';
+  a.innerHTML='<svg aria-hidden="true" width="28" height="28" viewBox="0 0 32 32" fill="currentColor"><path d="M19.11 17.48c-.26-.13-1.53-.75-1.77-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.19-.56.06-.26-.13-1.1-.4-2.1-1.27-.78-.7-1.31-1.56-1.46-1.82-.15-.26-.02-.41.11-.54.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.39-.8-1.9-.21-.5-.43-.43-.58-.43-.15 0-.32-.02-.49-.02-.17 0-.45.06-.69.32-.24.26-.91.89-.91 2.17 0 1.28.93 2.51 1.07 2.68.13.17 1.83 2.79 4.43 3.92.62.27 1.1.43 1.47.55.62.2 1.19.17 1.64.1.5-.07 1.53-.62 1.75-1.22.22-.6.22-1.12.15-1.22-.06-.1-.24-.16-.5-.29zM16.02 5.33c-5.89 0-10.66 4.77-10.66 10.66 0 1.88.5 3.64 1.37 5.16L5.02 27l5.98-1.57c1.46.8 3.14 1.27 4.92 1.27 5.89 0 10.66-4.77 10.66-10.66 0-5.89-4.77-10.66-10.66-10.66zm0 19.4c-1.7 0-3.28-.5-4.6-1.37l-.33-.21-3.54.93.95-3.45-.22-.35c-.82-1.34-1.29-2.9-1.29-4.59 0-4.87 3.95-8.82 8.82-8.82s8.82 3.95 8.82 8.82-3.95 8.82-8.82 8.82z"/></svg>';
+  document.body.appendChild(a);
+})();
+(function addGlobalOverlay(){
+  const style=document.createElement('style');
+  style.textContent = `
+  .dobler-wa{position:fixed;width:60px;height:60px;bottom:20px;right:20px;background:#25d366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:2px 2px 5px rgba(0,0,0,.3);z-index:9999;}
+  .dobler-wa:hover{transform:scale(1.07);}
+  .dobler-watermark{position:fixed;inset:0;display:grid;place-items:center;z-index:9998;pointer-events:none;}
+  .dobler-watermark img{max-width:40vw;max-height:40vh;opacity:.15;filter:grayscale(.1);}
+  `;
+  document.head.appendChild(style);
+})();
+</script>
+</body>
+</html>
