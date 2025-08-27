@@ -150,26 +150,26 @@
     border-radius: 8px;
   }
 
-  /* Carrusel para la sección de salas */
-  #salas .slider {
+  /* Carrusel para la sección de cunas */
+  #cunas .slider {
     position: relative;
     width: 100%;
     overflow: hidden;
   }
-  #salas .slides {
+  #cunas .slides {
     display: flex;
     transition: transform 0.5s ease;
   }
-  #salas .slide {
+  #cunas .slide {
     min-width: 100%;
   }
-  #salas .slide img {
+  #cunas .slide img {
     width: 100%;
     height: 400px;
     object-fit: cover;
     border-radius: 8px;
   }
-  #salas .nav-button {
+  #cunas .nav-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -181,8 +181,8 @@
     cursor: pointer;
     z-index: 2;
   }
-  #salas .prev { left: 10px; }
-  #salas .next { right: 10px; }
+  #cunas .prev { left: 10px; }
+  #cunas .next { right: 10px; }
   /* Footer y botones */
   footer {
     background: var(--mid);
@@ -257,32 +257,32 @@
     </div>
   </section>
 
-  <!-- Sección de salas con carrusel y control manual -->
+  <!-- Sección de salas con galería estática -->
   <section id="salas">
     <h2>Nuestras Salas de Diseño</h2>
-    <div class="slider">
-      <button class="nav-button prev">&lt;</button>
-      <div class="slides">
-        <div class="slide"><img src="6ea91448-eb9f-4478-a579-54eee96ed6f1.png" alt="Sala de lujo 1"></div>
-        <div class="slide"><img src="ceac04d6-6f3e-440e-a19f-a27f966f8cda.png" alt="Sala de lujo 2"></div>
-        <div class="slide"><img src="8db3027d-49e6-4e42-9082-78d11a8d8d3d.png" alt="Sala de lujo 3"></div>
-        <div class="slide"><img src="d5fd3680-8268-4af4-ad52-5dc83a927d37.png" alt="Sala de lujo 4"></div>
-        <div class="slide"><img src="3a40f027-5aa2-44d3-a880-26118a9eb1cb.png" alt="Sala de lujo 5"></div>
-        <div class="slide"><img src="2b773b4e-ec58-488c-9fb1-01641c298a2d.png" alt="Sala de lujo 6"></div>
-        <div class="slide"><img src="18def874-5e70-46ca-b64d-89a9e5d38543.png" alt="Sala de lujo 7"></div>
-      </div>
-      <button class="nav-button next">&gt;</button>
+    <div class="gallery-grid">
+      <img src="6ea91448-eb9f-4478-a579-54eee96ed6f1.png" alt="Sala de lujo 1">
+      <img src="ceac04d6-6f3e-440e-a19f-a27f966f8cda.png" alt="Sala de lujo 2">
+      <img src="8db3027d-49e6-4e42-9082-78d11a8d8d3d.png" alt="Sala de lujo 3">
+      <img src="d5fd3680-8268-4af4-ad52-5dc83a927d37.png" alt="Sala de lujo 4">
+      <img src="3a40f027-5aa2-44d3-a880-26118a9eb1cb.png" alt="Sala de lujo 5">
+      <img src="2b773b4e-ec58-488c-9fb1-01641c298a2d.png" alt="Sala de lujo 6">
+      <img src="18def874-5e70-46ca-b64d-89a9e5d38543.png" alt="Sala de lujo 7">
     </div>
   </section>
 
-  <!-- Sección de cunas en rejilla -->
+  <!-- Sección de cunas con carrusel y control manual -->
   <section id="cunas">
     <h2>Nuestras Cunas</h2>
-    <div class="gallery-grid">
-      <img src="fb3f992a-66fa-4be9-91b7-6be88e5f491b.png" alt="Cuna 1">
-      <img src="40b385d9-4675-4f83-959e-d32cc05233da.png" alt="Cuna 2">
-      <img src="4061984b-9072-4f49-b695-2112d2376a87.png" alt="Cuna 3">
-      <img src="bb681ece-ce1a-45e1-bf40-0ba4046ac3a9.png" alt="Cuna 4">
+    <div class="slider">
+      <button class="nav-button prev">&lt;</button>
+      <div class="slides">
+        <div class="slide"><img src="fb3f992a-66fa-4be9-91b7-6be88e5f491b.png" alt="Cuna 1"></div>
+        <div class="slide"><img src="40b385d9-4675-4f83-959e-d32cc05233da.png" alt="Cuna 2"></div>
+        <div class="slide"><img src="4061984b-9072-4f49-b695-2112d2376a87.png" alt="Cuna 3"></div>
+        <div class="slide"><img src="bb681ece-ce1a-45e1-bf40-0ba4046ac3a9.png" alt="Cuna 4"></div>
+      </div>
+      <button class="nav-button next">&gt;</button>
     </div>
   </section>
 
@@ -388,18 +388,18 @@ const DOBLER = {
 })();
 </script>
 
-<!-- Script para el carrusel de salas -->
+<!-- Script para el carrusel de cunas -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const track = document.querySelector('#salas .slides');
-  const slides = document.querySelectorAll('#salas .slide');
+  const track = document.querySelector('#cunas .slides');
+  const slides = document.querySelectorAll('#cunas .slide');
   let current = 0;
   function showSlide(i) {
     current = (i + slides.length) % slides.length;
     track.style.transform = 'translateX(-' + current * 100 + '%)';
   }
-  const nextBtn = document.querySelector('#salas .next');
-  const prevBtn = document.querySelector('#salas .prev');
+  const nextBtn = document.querySelector('#cunas .next');
+  const prevBtn = document.querySelector('#cunas .prev');
   if (nextBtn && prevBtn) {
     nextBtn.addEventListener('click', function() { showSlide(current + 1); });
     prevBtn.addEventListener('click', function() { showSlide(current - 1); });
