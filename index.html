@@ -6,8 +6,8 @@
     <title>TODO CAMPO • Insumos Agro y Ferretería</title>
     <!-- Estilos principales -->
     <link rel="stylesheet" href="style.css">
-    <!-- Fuente Montserrat para mejorar la tipografía -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Fuentes Google: Montserrat para el cuerpo y Bebas Neue para títulos -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
     <meta name="description" content="TODO CAMPO es su aliado confiable en insumos agrícolas y ferretería. Descubra nuestra misión, visión y valores, explore nuestro catálogo por categorías y contacte a nuestro equipo experto.">
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="DiGP87waMGpX5hvFGEthTTJG/ZQxKmTvquYmQ9iEFDaWRP2vVJg3Yz7vxx9tFo4ai7oTnSENmAu2efcbgZ7SPA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,30 +22,40 @@
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#galeria">Galería</a></li>
+                <!-- Eliminamos la opción de Galería y Animaciones del menú para integrar las animaciones como stickers dispersos -->
+                <li><a href="#drones">Fumigación</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Sección Hero sin imagen de fondo para un aspecto más profesional -->
+    <!-- Sección Hero con logo grande y stickers animados -->
     <header id="inicio" class="hero">
         <div class="overlay"></div>
         <div class="hero-content">
-            <!-- Mostrar el logo de TODO CAMPO en lugar de una imagen de fondo -->
+            <!-- Logo principal de TODO CAMPO -->
             <img src="logo.png" alt="Logo TODO CAMPO" class="hero-logo">
             <h1>Bienvenido a TODO CAMPO</h1>
             <p>Su socio en insumos agrícolas y ferretería.</p>
-            <a href="https://wa.me/573108946351" class="btn btn-whatsapp" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> Chat por WhatsApp
-            </a>
         </div>
-
-        <!-- Personaje ilustrado en el pie de la sección de bienvenida -->
-        <div class="hero-character">
-            <img src="farmer_character.png" alt="Personaje TODO CAMPO">
-        </div>
+        <!-- Eliminamos los stickers agrupados en el hero. Las animaciones se colocarán dispersas como stickers flotantes en toda la página. -->
     </header>
+
+    <!-- Stickers flotantes con mensajes amistosos -->
+    <div class="floating-stickers">
+        <div class="floating-sticker sticker1">
+            <img src="sticker5.png" alt="Sticker agrónomo">
+            <span class="sticker-msg">¡Bienvenido a TODO CAMPO!</span>
+        </div>
+        <div class="floating-sticker sticker2">
+            <img src="sticker6.png" alt="Sticker granjero">
+            <span class="sticker-msg">Tenemos todo para tu hogar y el campo</span>
+        </div>
+        <div class="floating-sticker sticker3">
+            <img src="sticker7.png" alt="Sticker ganadero">
+            <span class="sticker-msg">Asesoría experta siempre a tu alcance</span>
+        </div>
+    </div>
 
     <!-- Sección Sobre Nosotros -->
     <section id="nosotros" class="section">
@@ -115,16 +125,17 @@
         </div>
     </section>
 
-    <!-- Sección Galería -->
-    <section id="galeria" class="section section-alt">
+    <!-- Sección Galería y Animaciones eliminadas: ahora se integran como stickers flotantes dispersos -->
+
+    <!-- Sección Fumigación con Drones -->
+    <section id="drones" class="section section-alt">
         <div class="container">
-            <h2>Galería</h2>
-            <p>Inspiración de nuestros proyectos y productos en acción.</p>
-            <div class="gallery-grid">
-                <!-- Imágenes de ejemplo, puede actualizar con fotos propias -->
-                <div class="gallery-item" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/23/Hammer_and_wrench.jpg');"></div>
-                <div class="gallery-item" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6d/CenterPivotIrrigation2018.jpg');"></div>
-                <div class="gallery-item" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d6/Agricultural_fields_in_Spain.jpg');"></div>
+            <h2>Fumigación con Drones</h2>
+            <p>Descubre nuestros innovadores servicios de fumigación mediante drones, optimizando la aplicación de insumos agrícolas de forma eficiente y precisa.</p>
+            <div class="dron-gallery">
+                <img src="dron1.jpg" alt="Dron 1" />
+                <img src="dron2.jpg" alt="Dron 2" />
+                <img src="dron3.jpg" alt="Dron 3" />
             </div>
         </div>
     </section>
@@ -138,15 +149,22 @@
                     <h3>Información de Contacto</h3>
                     <p><i class="fa-solid fa-phone"></i> Teléfono: <a href="tel:+573108946351">+57 310 894 6351</a></p>
                     <p><i class="fa-solid fa-envelope"></i> Correo: <a href="mailto:todocampo.2020@hotmail.com">todocampo.2020@hotmail.com</a></p>
-                    <p><i class="fa-solid fa-location-dot"></i> Dirección: Cra 16 #29-20 barrio Centro, Bucaramanga, Santander, Colombia</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Sede principal: Calle 30 #15-56 Centro, Bucaramanga, Santander, Colombia</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Sede secundaria: Cra 16 #29-20 barrio Centro, Bucaramanga, Santander, Colombia</p>
                     <p><i class="fa-solid fa-id-card"></i> NIT: 37752195-9</p>
                 </div>
                 <div>
                     <h3>Ubícanos</h3>
                     <div class="map-container">
-                        <iframe src="https://maps.google.com/maps?q=Cra%2016%20%2329-20%20Bucaramanga%20Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
+                        <iframe src="https://maps.google.com/maps?q=Calle%2030%20%2315-56%20Centro%20Bucaramanga%20Santander%20Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
+            </div>
+            <!-- Botón de contacto por WhatsApp ubicado junto a la información de contacto -->
+            <div class="whatsapp-contact">
+                <a href="https://wa.me/573108946351" class="btn btn-whatsapp" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Contáctanos por WhatsApp
+                </a>
             </div>
         </div>
     </section>
@@ -158,26 +176,38 @@
         </div>
     </footer>
 
-    <!-- Script para Crisp Chat (sustituir REEMPLAZAR_POR_ID_CRISP) -->
-    <script type="text/javascript">
-        // Configuración de Crisp para usar la interfaz en español
-        window.CRISP_RUNTIME_CONFIG = { locale: 'es' };
-        window.$crisp = [];
-        window.CRISP_WEBSITE_ID = "REEMPLAZAR_POR_ID_CRISP";
-        (function() {
-            var d = document;
-            var s = d.createElement("script");
-            s.src = "https://client.crisp.chat/l.js";
-            s.async = 1;
-            d.getElementsByTagName("head")[0].appendChild(s);
-        })();
-    </script>
+    <!-- Botón de WhatsApp incorporado en la sección de contacto -->
+    <!-- Eliminamos el botón flotante y lo trasladamos a la sección de contacto para mayor claridad y evitar superposición con otros elementos -->
+
     <!-- Script principal -->
     <script src="script.js"></script>
 
-    <!-- Burbuja de chat personalizada con avatar caricaturesco -->
-    <div id="chat-bubble" class="chat-bubble">
+    <!-- Burbuja de chat personalizada: al hacer clic abre el asistente virtual -->
+    <div id="chat-bubble" class="chat-bubble" aria-label="Asistente virtual">
         <img src="agent_avatar.png" alt="Asesor virtual TODO CAMPO">
+    </div>
+
+    <!-- Modal con preguntas frecuentes para asistencia básica -->
+    <div id="chat-modal" class="chat-modal">
+        <div class="chat-content">
+            <h3>¿En qué podemos ayudarte?</h3>
+            <details>
+                <summary>¿Qué productos ofrecen?</summary>
+                <p>Ofrecemos una amplia gama de insumos agrícolas, herramientas de ferretería, sistemas de riego, semillas y fertilizantes.</p>
+            </details>
+            <details>
+                <summary>¿Cómo puedo realizar un pedido?</summary>
+                <p>Puedes visitarnos en nuestras sedes o contactarnos a través de WhatsApp para realizar tu pedido y coordinar el envío.</p>
+            </details>
+            <details>
+                <summary>¿Realizan envíos a domicilio?</summary>
+                <p>Sí, realizamos envíos a diferentes regiones. ¡Contáctanos para consultar disponibilidad y costos de envío!</p>
+            </details>
+            <a href="https://wa.me/573108946351" class="btn btn-whatsapp" target="_blank" style="margin-top:1rem; display:inline-block;">
+                <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp
+            </a>
+            <button id="chat-close" class="btn btn-secondary" style="margin-top:0.5rem;">Cerrar</button>
+        </div>
     </div>
 </body>
 </html>
