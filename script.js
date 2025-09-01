@@ -51,22 +51,61 @@ if (chatClose && chatModal) {
 }
 
 // -------------------------------------------------------------------
-// Asignar mensajes aleatorios a los stickers flotantes
-// Los mensajes se seleccionan de forma aleatoria a partir de un listado
-// que resume los diferentes campos y servicios que ofrece TODO CAMPO.
-// Esto brinda variedad y mantiene la frescura en cada visita.
+// Asignar mensajes y posiciones aleatorias a los stickers flotantes
+//
+// Las burbujas se desplazaran a posiciones aleatorias de la pantalla y
+// mostrarán mensajes diferentes relacionados con los servicios de TODO
+// CAMPO.  Cada cierto tiempo desaparecen y reaparecen en otro sitio
+// para no obstruir la navegación.  Los mensajes abarcan temas de
+// agricultura, ferretería, hogar, riego, motores y herramientas.
 (() => {
     const messages = [
         '¡Bienvenido a TODO CAMPO!',
         'Todo para el campo y la ferretería',
-        'Productos agrícolas, ferretería y más',
-        'Sistemas de riego, semillas y fertilizantes',
-        'Soluciones para tu hogar y cultivo',
-        'Herramientas, adhesivos y pinturas de calidad'
+        'Productos agrícolas, ferretería y hogar',
+        'Sistemas de riego, bombas y aspersores',
+        'Insumos agrícolas, semillas y fertilizantes',
+        'Herramientas manuales y eléctricas',
+        'Motores y generadores para el agro',
+        'Soluciones para tu hogar y cultivos',
+        'Pinturas, adhesivos y accesorios',
+        'Equipos para riego, riego por goteo y aspersión'
     ];
-    const stickerMsgs = document.querySelectorAll('.floating-sticker .sticker-msg');
-    stickerMsgs.forEach(el => {
-        const randomIndex = Math.floor(Math.random() * messages.length);
-        el.textContent = messages[randomIndex];
-    });
+
+    const stickers = document.querySelectorAll('.floating-sticker');
+
+    function randomizeStickers() {
+        stickers.forEach(sticker => {
+            const msgSpan = sticker.querySelector('.sticker-msg');
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            msgSpan.textContent = randomMessage;
+            // Generar coordenadas aleatorias dentro de márgenes para que no
+            // interfiera con el contenido principal.  Usamos unidades de
+            // viewport para adaptarnos a distintos tamaños de pantalla.
+            const top = Math.random() * 60 + 10;    // 10% a 70% de altura
+            const left = Math.random() * 70 + 5;    // 5% a 75% de ancho
+            sticker.style.top = top + 'vh';
+            sticker.style.left = left + 'vw';
+            // Reiniciar otras posiciones que puedan haber quedado definidas
+            sticker.style.right = 'auto';
+            sticker.style.bottom = 'auto';
+            // Hacer visible la burbuja
+            sticker.style.opacity = 1;
+        });
+    }
+    // Realizar la primera asignación inmediata
+    randomizeStickers();
+    // Establecer un intervalo para que cada 15 segundos se oculten y
+    // reaparezcan en posiciones y con mensajes distintos
+    setInterval(() => {
+        // Ocultar gradualmente
+        stickers.forEach(sticker => {
+            sticker.style.opacity = 0;
+        });
+        // Después de 1 segundo (justo tras la transición), reposicionar y
+        // mostrar de nuevo
+        setTimeout(() => {
+            randomizeStickers();
+        }, 1000);
+    }, 15000);
 })();
