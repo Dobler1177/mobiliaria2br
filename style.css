@@ -14,7 +14,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: var(--text-color);
     line-height: 1.6;
     background-color: var(--light);
@@ -39,8 +39,8 @@ body {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.8rem;
+    font-weight: 700;
     color: var(--white);
     text-decoration: none;
 }
@@ -55,6 +55,7 @@ body {
     color: var(--white);
     text-decoration: none;
     transition: color 0.3s ease;
+    font-weight: 500;
 }
 
 .nav-links a:hover {
@@ -63,8 +64,7 @@ body {
 
 .hero {
     height: 100vh;
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(120deg, var(--primary-green), var(--accent-yellow));
     position: relative;
     display: flex;
     align-items: center;
@@ -78,7 +78,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .hero-content {
@@ -88,13 +88,20 @@ body {
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .hero p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.hero img.hero-logo {
+    max-width: 400px;
+    margin-bottom: 1rem;
 }
 
 .btn {
@@ -105,6 +112,7 @@ body {
     text-decoration: none;
     color: var(--white);
     transition: background 0.3s ease;
+    font-weight: 600;
 }
 
 .btn-whatsapp {
@@ -150,8 +158,9 @@ body {
 h2 {
     text-align: center;
     margin-bottom: 2rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--dark);
+    font-weight: 700;
 }
 
 .about-grid {
@@ -163,6 +172,7 @@ h2 {
 .about-grid div h3 {
     margin-bottom: 0.5rem;
     color: var(--primary-green);
+    font-size: 1.5rem;
 }
 
 .products-grid {
@@ -182,7 +192,7 @@ h2 {
 }
 
 .product-card i {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--primary-green);
     margin-bottom: 1rem;
 }
@@ -190,10 +200,12 @@ h2 {
 .product-card h3 {
     margin-bottom: 0.5rem;
     color: var(--dark);
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .product-card p {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .product-card:hover {
@@ -260,11 +272,53 @@ h2 {
     text-align: center;
 }
 
+/* Chat bubble styles */
+.chat-bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 1000;
+    overflow: hidden;
+    background: var(--primary-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-bubble img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .hero p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
+}
+
+/* Imagen del personaje en el pie de la sección de bienvenida */
+.hero-character {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 30%;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-character img {
+    width: 100%;
+    height: auto;
+    display: block;
 }

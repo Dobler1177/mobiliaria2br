@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO CAMPO • Insumos Agro y Ferretería</title>
+    <!-- Estilos principales -->
     <link rel="stylesheet" href="style.css">
+    <!-- Fuente Montserrat para mejorar la tipografía -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <meta name="description" content="TODO CAMPO es su aliado confiable en insumos agrícolas y ferretería. Descubra nuestra misión, visión y valores, explore nuestro catálogo por categorías y contacte a nuestro equipo experto.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-DiGP87waMGpX5hvFGEthTTJG/ZQxKmTvquYmQ9iEFDaWRP2vVJg3Yz7vxx9tFo4ai7oTnSENmAu2efcbgZ7SPA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="DiGP87waMGpX5hvFGEthTTJG/ZQxKmTvquYmQ9iEFDaWRP2vVJg3Yz7vxx9tFo4ai7oTnSENmAu2efcbgZ7SPA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <!-- Navegación fija -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#inicio" class="logo">TODO CAMPO</a>
@@ -23,17 +28,26 @@
         </div>
     </nav>
 
-    <header id="inicio" class="hero" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/af/Round_farm_2007.jpg');">
+    <!-- Sección Hero sin imagen de fondo para un aspecto más profesional -->
+    <header id="inicio" class="hero">
         <div class="overlay"></div>
         <div class="hero-content">
+            <!-- Mostrar el logo de TODO CAMPO en lugar de una imagen de fondo -->
+            <img src="logo.png" alt="Logo TODO CAMPO" class="hero-logo">
             <h1>Bienvenido a TODO CAMPO</h1>
             <p>Su socio en insumos agrícolas y ferretería.</p>
             <a href="https://wa.me/573108946351" class="btn btn-whatsapp" target="_blank">
                 <i class="fa-brands fa-whatsapp"></i> Chat por WhatsApp
             </a>
         </div>
+
+        <!-- Personaje ilustrado en el pie de la sección de bienvenida -->
+        <div class="hero-character">
+            <img src="farmer_character.png" alt="Personaje TODO CAMPO">
+        </div>
     </header>
 
+    <!-- Sección Sobre Nosotros -->
     <section id="nosotros" class="section">
         <div class="container">
             <h2>Sobre Nosotros</h2>
@@ -54,6 +68,7 @@
         </div>
     </section>
 
+    <!-- Sección Productos -->
     <section id="productos" class="section section-alt">
         <div class="container">
             <h2>Nuestros Productos</h2>
@@ -88,29 +103,33 @@
         </div>
     </section>
 
+    <!-- Sección Catálogo -->
     <section id="catalogo" class="section">
         <div class="container">
             <h2>Catálogo</h2>
             <p>Descargue nuestro catálogo completo en formato PDF o explórelo online.</p>
             <div class="catalog-actions">
-                <a href="Catalogo%20Todo%20Campo.pdf" class="btn btn-primary" download>Descargar Catálogo (PDF)</a>
-                <a href="Catalogo%20Todo%20Campo.pdf" class="btn btn-secondary" target="_blank">Ver en Línea</a>
+                <a href="catalogo_todo_campo.pdf" class="btn btn-primary" download>Descargar Catálogo (PDF)</a>
+                <a href="catalogo_todo_campo.pdf" class="btn btn-secondary" target="_blank">Ver en Línea</a>
             </div>
         </div>
     </section>
 
+    <!-- Sección Galería -->
     <section id="galeria" class="section section-alt">
         <div class="container">
             <h2>Galería</h2>
             <p>Inspiración de nuestros proyectos y productos en acción.</p>
             <div class="gallery-grid">
-                <div class="gallery-item" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/af/Round_farm_2007.jpg');"></div>
+                <!-- Imágenes de ejemplo, puede actualizar con fotos propias -->
+                <div class="gallery-item" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/23/Hammer_and_wrench.jpg');"></div>
                 <div class="gallery-item" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6d/CenterPivotIrrigation2018.jpg');"></div>
                 <div class="gallery-item" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d6/Agricultural_fields_in_Spain.jpg');"></div>
             </div>
         </div>
     </section>
 
+    <!-- Sección Contacto -->
     <section id="contacto" class="section">
         <div class="container">
             <h2>Contacto</h2>
@@ -119,26 +138,30 @@
                     <h3>Información de Contacto</h3>
                     <p><i class="fa-solid fa-phone"></i> Teléfono: <a href="tel:+573108946351">+57 310 894 6351</a></p>
                     <p><i class="fa-solid fa-envelope"></i> Correo: <a href="mailto:todocampo.2020@hotmail.com">todocampo.2020@hotmail.com</a></p>
-                    <p><i class="fa-solid fa-location-dot"></i> Dirección: [Agregar dirección física aquí]</p>
-                    <p><i class="fa-solid fa-id-card"></i> RUT: [Número de RUT]</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Dirección: Cra 16 #29-20 barrio Centro, Bucaramanga, Santander, Colombia</p>
+                    <p><i class="fa-solid fa-id-card"></i> NIT: 37752195-9</p>
                 </div>
                 <div>
                     <h3>Ubícanos</h3>
                     <div class="map-container">
-                        <iframe src="https://maps.google.com/maps?q=Colombia&t=&z=5&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
+                        <iframe src="https://maps.google.com/maps?q=Cra%2016%20%2329-20%20Bucaramanga%20Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Pie de página -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 TODO CAMPO. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <!-- Script para Crisp Chat (sustituir REEMPLAZAR_POR_ID_CRISP) -->
     <script type="text/javascript">
+        // Configuración de Crisp para usar la interfaz en español
+        window.CRISP_RUNTIME_CONFIG = { locale: 'es' };
         window.$crisp = [];
         window.CRISP_WEBSITE_ID = "REEMPLAZAR_POR_ID_CRISP";
         (function() {
@@ -149,6 +172,12 @@
             d.getElementsByTagName("head")[0].appendChild(s);
         })();
     </script>
+    <!-- Script principal -->
     <script src="script.js"></script>
+
+    <!-- Burbuja de chat personalizada con avatar caricaturesco -->
+    <div id="chat-bubble" class="chat-bubble">
+        <img src="agent_avatar.png" alt="Asesor virtual TODO CAMPO">
+    </div>
 </body>
 </html>
