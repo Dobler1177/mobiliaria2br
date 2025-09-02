@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO CAMPO • Insumos Agro y Ferretería</title>
+    <!-- Estilos principales -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuentes Google: Montserrat para el cuerpo y Bebas Neue para títulos -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta name="description" content="TODO CAMPO es su aliado confiable en insumos agrícolas y ferretería. Descubra nuestra misión, visión y valores, explore nuestro catálogo por categorías y contacte a nuestro equipo experto.">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="DiGP87waMGpX5hvFGEthTTJG/ZQxKmTvquYmQ9iEFDaWRP2vVJg3Yz7vxx9tFo4ai7oTnSENmAu2efcbgZ7SPA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navegación fija -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#inicio" class="logo">TODO CAMPO</a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <!-- Eliminamos la opción de Galería y Animaciones del menú para integrar las animaciones como stickers dispersos -->
+                <li><a href="#drones">Fumigación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección Hero con logo grande y stickers animados -->
+    <header id="inicio" class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <!-- Logo principal de TODO CAMPO -->
+            <img src="logo.png" alt="Logo TODO CAMPO" class="hero-logo">
+            <h1>Bienvenido a TODO CAMPO</h1>
+            <p>Su socio en insumos agrícolas y ferretería.</p>
+        </div>
+        <!-- Eliminamos los stickers agrupados en el hero. Las animaciones se colocarán dispersas como stickers flotantes en toda la página. -->
+    </header>
+
+    <!-- Stickers flotantes con mensajes amistosos -->
+    <div class="floating-stickers">
+        <div class="floating-sticker sticker1">
+            <img src="sticker5.png" alt="Sticker agrónomo">
+            <span class="sticker-msg">¡Bienvenido a TODO CAMPO!</span>
+        </div>
+        <div class="floating-sticker sticker2">
+            <img src="sticker6.png" alt="Sticker granjero">
+            <span class="sticker-msg">Tenemos todo para tu hogar y el campo</span>
+        </div>
+        <div class="floating-sticker sticker3">
+            <img src="sticker7.png" alt="Sticker ganadero">
+            <span class="sticker-msg">Asesoría experta siempre a tu alcance</span>
+        </div>
+    </div>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="nosotros" class="section">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <div class="about-grid">
+                <div>
+                    <h3>Misión</h3>
+                    <p>Proveer soluciones integrales en el sector agrícola y ferretero, ofreciendo insumos y herramientas de alta calidad respaldados por asesoría profesional. Buscamos contribuir al desarrollo sostenible del campo y el bienestar de nuestros clientes.</p>
+                </div>
+                <div>
+                    <h3>Visión</h3>
+                    <p>Ser reconocidos como la empresa líder en la distribución de insumos agrícolas y productos de ferretería en la región, destacándonos por la excelencia en el servicio, la innovación y el compromiso con la comunidad agrícola.</p>
+                </div>
+                <div>
+                    <h3>Valores</h3>
+                    <p>Integridad, responsabilidad, respeto por el medio ambiente, trabajo en equipo y compromiso con la satisfacción del cliente son los pilares que guían nuestras decisiones y acciones diariamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Productos -->
+    <section id="productos" class="section section-alt">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <p>Explore nuestras categorías y encuentre todo lo que necesita para el campo y el hogar.</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <i class="fa-solid fa-hammer"></i>
+                    <h3>Ferretería</h3>
+                    <p>Herramientas, tornillería, adhesivos, pinturas y más para proyectos de construcción y mantenimiento.</p>
+                </div>
+                <div class="product-card">
+                    <i class="fa-solid fa-leaf"></i>
+                    <h3>Agro</h3>
+                    <p>Semillas, fertilizantes, sustratos y suministros para cultivos saludables y productivos.</p>
+                </div>
+                <div class="product-card">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h3>Herramientas</h3>
+                    <p>Amplia gama de herramientas manuales y eléctricas para profesionales y aficionados.</p>
+                </div>
+                <div class="product-card">
+                    <i class="fa-solid fa-water"></i>
+                    <h3>Riego</h3>
+                    <p>Sistemas de riego, bombas, aspersores y accesorios para optimizar el uso del agua en sus cultivos.</p>
+                </div>
+                <div class="product-card">
+                    <i class="fa-solid fa-house"></i>
+                    <h3>Hogar</h3>
+                    <p>Artículos de ferretería y menaje para el hogar, limpieza, organización y decoración.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Catálogo -->
+    <section id="catalogo" class="section">
+        <div class="container">
+            <h2>Catálogo</h2>
+            <p>Descargue nuestro catálogo completo en formato PDF o explórelo online.</p>
+            <div class="catalog-actions">
+                <a href="catalogo_todo_campo.pdf" class="btn btn-primary" download>Descargar Catálogo (PDF)</a>
+                <a href="catalogo_todo_campo.pdf" class="btn btn-secondary" target="_blank">Ver en Línea</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Galería y Animaciones eliminadas: ahora se integran como stickers flotantes dispersos -->
+
+    <!-- Sección Fumigación con Drones -->
+    <section id="drones" class="section section-alt">
+        <div class="container">
+            <h2>Fumigación con Drones</h2>
+            <p>
+                Nuestros drones de fumigación permiten aplicar fertilizantes y
+                fitosanitarios con una precisión milimétrica, reduciendo el
+                uso de insumos y asegurando una cobertura uniforme en los
+                cultivos. Gracias a la programación de rutas y al control
+                automático de altura y velocidad, son ideales para todo tipo
+                de terrenos, incluso aquellos de difícil acceso o con
+                pendientes.
+            </p>
+            <p>
+                <strong>Ventajas de la fumigación con drones:</strong>
+                aplican dosis exactas en las zonas necesarias, minimizan
+                la contaminación del suelo y el agua, protegen al operario
+                al evitar el contacto directo con químicos y permiten
+                fumigar áreas extensas en menos tiempo que los métodos
+                tradicionales. Estas soluciones innovadoras complementan
+                nuestros sistemas de riego y otros servicios agrícolas.
+            </p>
+            <div class="dron-gallery">
+                <img src="dron1.jpg" alt="Dron 1" />
+                <img src="dron2.jpg" alt="Dron 2" />
+                <img src="dron3.jpg" alt="Dron 3" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-grid">
+                <div>
+                    <h3>Información de Contacto</h3>
+                    <p><i class="fa-solid fa-phone"></i> Teléfono: <a href="tel:+573108946351">+57 310 894 6351</a></p>
+                    <p><i class="fa-solid fa-envelope"></i> Correo: <a href="mailto:todocampo.2020@hotmail.com">todocampo.2020@hotmail.com</a></p>
+                    <p><i class="fa-solid fa-location-dot"></i> Sede principal: Calle 30 #15-56 Centro, Bucaramanga, Santander, Colombia</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Sede secundaria: Cra 16 #29-20 barrio Centro, Bucaramanga, Santander, Colombia</p>
+                    <p><i class="fa-solid fa-id-card"></i> NIT: 37752195-9</p>
+                </div>
+                <div>
+                    <h3>Ubícanos</h3>
+                    <div class="map-container">
+                        <iframe src="https://maps.google.com/maps?q=Calle%2030%20%2315-56%20Centro%20Bucaramanga%20Santander%20Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- Botón de contacto por WhatsApp ubicado junto a la información de contacto -->
+            <div class="whatsapp-contact">
+                <a href="https://wa.me/573108946351" class="btn btn-whatsapp" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Contáctanos por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TODO CAMPO. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón de WhatsApp incorporado en la sección de contacto -->
+    <!-- Eliminamos el botón flotante y lo trasladamos a la sección de contacto para mayor claridad y evitar superposición con otros elementos -->
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+
+    <!-- Burbuja de chat personalizada: al hacer clic abre el asistente virtual -->
+    <div id="chat-bubble" class="chat-bubble" aria-label="Asistente virtual">
+        <img src="agent_avatar.png" alt="Asesor virtual TODO CAMPO">
+    </div>
+
+    <!-- Modal con preguntas frecuentes para asistencia básica -->
+    <div id="chat-modal" class="chat-modal">
+        <div class="chat-content">
+            <h3>¿En qué podemos ayudarte?</h3>
+            <details>
+                <summary>¿Qué productos ofrecen?</summary>
+                <p>Ofrecemos una amplia gama de insumos agrícolas, herramientas de ferretería, sistemas de riego, semillas y fertilizantes.</p>
+            </details>
+            <details>
+                <summary>¿Cómo puedo realizar un pedido?</summary>
+                <p>Puedes visitarnos en nuestras sedes o contactarnos a través de WhatsApp para realizar tu pedido y coordinar el envío.</p>
+            </details>
+            <details>
+                <summary>¿Realizan envíos a domicilio?</summary>
+                <p>Sí, realizamos envíos a diferentes regiones. ¡Contáctanos para consultar disponibilidad y costos de envío!</p>
+            </details>
+            <a href="https://wa.me/573108946351" class="btn btn-whatsapp" target="_blank" style="margin-top:1rem; display:inline-block;">
+                <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp
+            </a>
+            <button id="chat-close" class="btn btn-secondary" style="margin-top:0.5rem;">Cerrar</button>
+        </div>
+    </div>
+</body>
+</html>

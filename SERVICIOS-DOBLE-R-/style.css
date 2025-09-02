@@ -1,0 +1,597 @@
+:root {
+    --primary-green: #2ecc71;
+    --accent-yellow: #f1c40f;
+    --dark: #2c3e50;
+    --light: #ecf0f1;
+    --white: #ffffff;
+    --text-color: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--light);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(44, 62, 80, 0.9);
+    z-index: 1000;
+    color: var(--white);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--accent-yellow);
+}
+
+/*
+ * Hero section styles
+ * Replace the gradient background with a large farmland image to
+ * evoke the lush landscapes donde se desarrolla TODO CAMPO.  The
+ * background is set to cover and centered to ensure the image scales
+ * nicely across devices.  An overlay is still used to provide
+ * contrast for the text and logo.  The height of the hero is 100vh
+ * so it fills the viewport on load.
+ */
+.hero {
+    height: 100vh;
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+    position: relative;
+    color: var(--white);
+    z-index: 1;
+}
+
+.hero h1 {
+    /* Increment the size of the bienvenida para mayor impacto */
+    font-size: 5.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.hero img.hero-logo {
+    max-width: 600px;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 3rem;
+    border: none;
+    text-decoration: none;
+    color: var(--white);
+    transition: background 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+}
+
+.btn-whatsapp:hover {
+    background: #1ebc57;
+}
+
+.btn-primary {
+    background: var(--primary-green);
+}
+
+.btn-primary:hover {
+    background: #27ae60;
+}
+
+.btn-secondary {
+    background: var(--accent-yellow);
+    color: var(--dark);
+}
+
+.btn-secondary:hover {
+    background: #d4ac0d;
+    color: var(--dark);
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.section-alt {
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: var(--dark);
+    font-weight: 700;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.about-grid div h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-green);
+    font-size: 1.5rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card i {
+    font-size: 3rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.product-card p {
+    font-size: 1rem;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.catalog-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.footer {
+    background: var(--dark);
+    color: var(--white);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Chat bubble styles */
+.chat-bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 1000;
+    overflow: hidden;
+    background: var(--primary-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-bubble img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: var(--white);
+    padding: 0.8rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.whatsapp-floating:hover {
+    background: #1ebc57;
+}
+
+/* Stickers animados en el Hero */
+.stickers {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 1rem;
+    z-index: 2;
+}
+
+.stickers img {
+    width: 60px;
+    height: 60px;
+    animation: float 3s infinite ease-in-out;
+}
+
+.stickers img:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.stickers img:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.stickers img:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Floating WhatsApp button */
+.whatsapp-floating {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.whatsapp-floating:hover {
+    transform: scale(1.1);
+}
+
+/* Stickers grid for Animaciones section */
+.stickers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.stickers-grid img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.stickers-grid img:hover {
+    transform: translateY(-5px);
+}
+
+/* Dron gallery section */
+.dron-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.dron-gallery img {
+    /* Permitimos que las imágenes de drones se muestren completas
+     * manteniendo su relación de aspecto original.  Ajustamos el
+     * tamaño mediante flex para que cada imagen ocupe aproximadamente
+     * un tercio del ancho disponible, pero pueda contraerse en
+     * pantallas pequeñas.  Al usar object-fit: contain, evitamos que
+     * se recorten partes importantes de las fotografías. */
+    flex: 1 1 300px;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+}
+
+/* WhatsApp contact button inside the Contact section */
+.whatsapp-contact {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+/*
+ * Personalizamos la sección de contacto con una imagen de fondo.  La
+ * imagen se ajusta a todo el ancho y alto de la sección, asegurando
+ * una apariencia profesional y sin distorsiones.  Un contenedor
+ * interno semitransparente mejora la legibilidad del texto sobre el
+ * fondo.
+ */
+#contacto {
+    background-image: url('contact-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+#contacto .container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    color: var(--dark);
+}
+
+/* --------------------------------------------------------------------
+ *  Animaciones como stickers flotantes
+ *  En lugar de una sección dedicada de "Animaciones", los personajes
+ *  se dispersan a lo largo de la página como pequeñas viñetas
+ *  amistosas.  Cada sticker está acompañado de un breve mensaje
+ *  para dar la bienvenida, destacar la variedad de productos y
+ *  ofrecer asesoría.  Los stickers se posicionan de forma fija
+ *  en diferentes puntos de la pantalla para acompañar el recorrido
+ *  del usuario sin interferir con el contenido principal.
+ * ------------------------------------------------------------------ */
+
+/* Contenedor general de stickers (no afecta el flujo) */
+.floating-stickers {
+    position: relative;
+    width: 100%;
+    height: 0;
+}
+
+/* Estilo base para cada sticker flotante */
+/*
+ * Configuración base para cada sticker flotante. Los stickers son
+ * posicionados de manera absoluta sobre la pantalla y comienzan
+ * transparentes.  La animación de opacidad y posición se maneja
+ * mediante JavaScript para que aparezcan y desaparezcan en sitios
+ * aleatorios sin interferir con otros elementos de la página.
+ */
+.floating-sticker {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    z-index: 900;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.8s ease, top 0.8s ease, left 0.8s ease;
+}
+
+.floating-sticker img {
+    /* Aumentamos el tamaño para apreciar mejor a los personajes y usamos
+     * object-fit: contain para que la imagen no se recorte.  La
+     * apariencia redonda se mantiene con el borde redondeado. */
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.floating-sticker .sticker-msg {
+    font-weight: 500;
+    color: var(--dark);
+}
+
+/* Posiciones específicas para cada sticker.  Se ubican en
+ * proporciones distintas de la pantalla para crear un efecto
+ * disperso. Ajuste estas coordenadas según sea necesario. */
+/*
+ * Eliminamos las posiciones fijas de los stickers para permitir que
+ * JavaScript controle su ubicación de manera dinámica.  Las
+ * propiedades 'top' y 'left' serán establecidas en tiempo de
+ * ejecución.
+ */
+
+/* Modal overlay for simple Q/A chat.  When active it displays as a
+ * flexible centered overlay.  By default it is hidden.  */
+.chat-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+}
+
+/* When the modal has the active class, display it */
+.chat-modal.active {
+    display: flex;
+}
+
+/* Inner container for chat content */
+.chat-content {
+    background: var(--white);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    max-height: 90%;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.chat-content h3 {
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.chat-content details {
+    margin-bottom: 0.75rem;
+}
+
+.chat-content summary {
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    color: var(--primary-green);
+}
+
+.chat-content details p {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
