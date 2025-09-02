@@ -75,7 +75,8 @@ body {
     height: 100vh;
     background-image: url('hero-bg.jpg');
     background-size: cover;
-    background-position: center;
+    /* Posicionamos la imagen en la parte superior para mostrar mejor el paisaje completo */
+    background-position: center top;
     position: relative;
     display: flex;
     align-items: center;
@@ -89,7 +90,12 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
+    /* Reducimos la opacidad del overlay para que la imagen de fondo se aprecie mejor */
+    /* Reducimos aún más la opacidad del overlay para que la imagen de fondo
+       se aprecie en toda su calidad.  Esto hace que el paisaje digital
+       agrícola sea más visible y claro, proporcionando una bienvenida
+       más impactante. */
+    background: rgba(0, 0, 0, 0.15);
 }
 
 .hero-content {
@@ -433,17 +439,102 @@ h2 {
 }
 
 .dron-gallery img {
-    width: 320px;
+    /* Permitimos que las imágenes de drones se muestren completas
+     * manteniendo su relación de aspecto original.  Ajustamos el
+     * tamaño mediante flex para que cada imagen ocupe aproximadamente
+     * un tercio del ancho disponible, pero pueda contraerse en
+     * pantallas pequeñas.  Al usar object-fit: contain, evitamos que
+     * se recorten partes importantes de las fotografías. */
+    flex: 1 1 300px;
+    max-width: 300px;
+    width: 100%;
     height: auto;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+}
+
+/*
+ * Lista de beneficios de la fumigación con drones
+ * Agrega espaciado y estilo de viñetas para resaltar cada ventaja de
+ * manera clara y ordenada.
+ */
+.dron-benefits {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    list-style-type: disc;
+    color: var(--dark);
+}
+
+.dron-benefits li {
+    margin-bottom: 0.5rem;
 }
 
 /* WhatsApp contact button inside the Contact section */
 .whatsapp-contact {
     text-align: center;
     margin-top: 1.5rem;
+}
+
+/*
+ * Botón flotante de WhatsApp
+ * Este botón aparece fijado en la esquina inferior derecha, justo encima
+ * del ícono del agente virtual. Permite iniciar un chat de WhatsApp
+ * desde cualquier lugar de la página. Al tener forma circular y un
+ * color verde corporativo, es claramente distinguible y no interfiere
+ * con otros elementos.
+ */
+.floating-whatsapp {
+    position: fixed;
+    /* Reposicionamos el botón de WhatsApp cerca de la burbuja de
+       servicio al cliente.  De esta manera, ambos elementos se
+       agrupan en la esquina inferior derecha y están fácilmente
+       accesibles sin superponerse a otro contenido. */
+    right: 20px;
+    bottom: 150px;
+    top: auto;
+    z-index: 1000;
+}
+
+.floating-whatsapp a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+.floating-whatsapp a:hover {
+    background: #1ebc57;
+}
+
+/*
+ * Personalizamos la sección de contacto con una imagen de fondo.  La
+ * imagen se ajusta a todo el ancho y alto de la sección, asegurando
+ * una apariencia profesional y sin distorsiones.  Un contenedor
+ * interno semitransparente mejora la legibilidad del texto sobre el
+ * fondo.
+ */
+#contacto {
+    background-image: url('contact-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+#contacto .container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    color: var(--dark);
 }
 
 /* --------------------------------------------------------------------
@@ -465,6 +556,13 @@ h2 {
 }
 
 /* Estilo base para cada sticker flotante */
+/*
+ * Configuración base para cada sticker flotante. Los stickers son
+ * posicionados de manera absoluta sobre la pantalla y comienzan
+ * transparentes.  La animación de opacidad y posición se maneja
+ * mediante JavaScript para que aparezcan y desaparezcan en sitios
+ * aleatorios sin interferir con otros elementos de la página.
+ */
 .floating-sticker {
     position: fixed;
     display: flex;
@@ -476,6 +574,8 @@ h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     z-index: 900;
     font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.8s ease, top 0.8s ease, left 0.8s ease;
 }
 
 .floating-sticker img {
@@ -496,21 +596,12 @@ h2 {
 /* Posiciones específicas para cada sticker.  Se ubican en
  * proporciones distintas de la pantalla para crear un efecto
  * disperso. Ajuste estas coordenadas según sea necesario. */
-.floating-sticker.sticker1 {
-    top: 35%;
-    left: 2%;
-}
-
-.floating-sticker.sticker2 {
-    top: 60%;
-    right: 3%;
-}
-
-.floating-sticker.sticker3 {
-    bottom: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-}
+/*
+ * Eliminamos las posiciones fijas de los stickers para permitir que
+ * JavaScript controle su ubicación de manera dinámica.  Las
+ * propiedades 'top' y 'left' serán establecidas en tiempo de
+ * ejecución.
+ */
 
 /* Modal overlay for simple Q/A chat.  When active it displays as a
  * flexible centered overlay.  By default it is hidden.  */

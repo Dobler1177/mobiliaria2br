@@ -41,21 +41,13 @@
         <!-- Eliminamos los stickers agrupados en el hero. Las animaciones se colocarán dispersas como stickers flotantes en toda la página. -->
     </header>
 
-    <!-- Stickers flotantes con mensajes amistosos -->
-    <div class="floating-stickers">
-        <div class="floating-sticker sticker1">
-            <img src="sticker5.png" alt="Sticker agrónomo">
-            <span class="sticker-msg">¡Bienvenido a TODO CAMPO!</span>
-        </div>
-        <div class="floating-sticker sticker2">
-            <img src="sticker6.png" alt="Sticker granjero">
-            <span class="sticker-msg">Tenemos todo para tu hogar y el campo</span>
-        </div>
-        <div class="floating-sticker sticker3">
-            <img src="sticker7.png" alt="Sticker ganadero">
-            <span class="sticker-msg">Asesoría experta siempre a tu alcance</span>
-        </div>
-    </div>
+    <!--
+      Se removieron los stickers flotantes que se desplazaban por la página.  Los
+      usuarios reportaron que estas animaciones se superponían con el
+      contenido mientras navegaban, por lo que se optó por eliminarlos
+      completamente.  Ahora el sitio se centra en la información sin
+      distracciones flotantes.
+    -->
 
     <!-- Sección Sobre Nosotros -->
     <section id="nosotros" class="section">
@@ -131,7 +123,24 @@
     <section id="drones" class="section section-alt">
         <div class="container">
             <h2>Fumigación con Drones</h2>
-            <p>Descubre nuestros innovadores servicios de fumigación mediante drones, optimizando la aplicación de insumos agrícolas de forma eficiente y precisa.</p>
+            <p>
+                Nuestros drones de fumigación permiten aplicar fertilizantes y
+                fitosanitarios con una precisión milimétrica, reduciendo el
+                uso de insumos y asegurando una cobertura uniforme en los
+                cultivos. Gracias a la programación de rutas y al control
+                automático de altura y velocidad, son ideales para todo tipo
+                de terrenos, incluso aquellos de difícil acceso o con
+                pendientes.
+            </p>
+            <p><strong>Ventajas de la fumigación con drones:</strong></p>
+            <ul class="dron-benefits">
+                <li>Aplican dosis exactas donde se necesita, evitando el desperdicio de insumos.</li>
+                <li>Reducen el uso de agua y agroquímicos al optimizar la aplicación.</li>
+                <li>Protegen al operario al eliminar la exposición directa a sustancias químicas.</li>
+                <li>Aumentan la productividad al cubrir grandes áreas en mucho menos tiempo.</li>
+                <li>Acceden a terrenos de difícil acceso o pendientes sin compactar el suelo.</li>
+                <li>Complementan nuestros sistemas de riego y otros servicios agrícolas para un manejo integral.</li>
+            </ul>
             <div class="dron-gallery">
                 <img src="dron1.jpg" alt="Dron 1" />
                 <img src="dron2.jpg" alt="Dron 2" />
@@ -160,12 +169,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Botón de contacto por WhatsApp ubicado junto a la información de contacto -->
-            <div class="whatsapp-contact">
-                <a href="https://wa.me/573108946351" class="btn btn-whatsapp" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i> Contáctanos por WhatsApp
-                </a>
-            </div>
         </div>
     </section>
 
@@ -175,6 +178,14 @@
             <p>&copy; 2025 TODO CAMPO. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- Botón flotante de WhatsApp al lado del agente virtual -->
+    <!-- Este botón se posiciona en la esquina inferior derecha, junto al ícono del agente virtual, para que los usuarios puedan iniciar un chat de WhatsApp en cualquier momento. -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/573108946351" target="_blank" aria-label="Chat por WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
 
     <!-- Botón de WhatsApp incorporado en la sección de contacto -->
     <!-- Eliminamos el botón flotante y lo trasladamos a la sección de contacto para mayor claridad y evitar superposición con otros elementos -->

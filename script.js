@@ -50,62 +50,7 @@ if (chatClose && chatModal) {
     });
 }
 
-// -------------------------------------------------------------------
-// Asignar mensajes y posiciones aleatorias a los stickers flotantes
-//
-// Las burbujas se desplazaran a posiciones aleatorias de la pantalla y
-// mostrarán mensajes diferentes relacionados con los servicios de TODO
-// CAMPO.  Cada cierto tiempo desaparecen y reaparecen en otro sitio
-// para no obstruir la navegación.  Los mensajes abarcan temas de
-// agricultura, ferretería, hogar, riego, motores y herramientas.
-(() => {
-    const messages = [
-        '¡Bienvenido a TODO CAMPO!',
-        'Todo para el campo y la ferretería',
-        'Productos agrícolas, ferretería y hogar',
-        'Sistemas de riego, bombas y aspersores',
-        'Insumos agrícolas, semillas y fertilizantes',
-        'Herramientas manuales y eléctricas',
-        'Motores y generadores para el agro',
-        'Soluciones para tu hogar y cultivos',
-        'Pinturas, adhesivos y accesorios',
-        'Equipos para riego, riego por goteo y aspersión'
-    ];
-
-    const stickers = document.querySelectorAll('.floating-sticker');
-
-    function randomizeStickers() {
-        stickers.forEach(sticker => {
-            const msgSpan = sticker.querySelector('.sticker-msg');
-            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-            msgSpan.textContent = randomMessage;
-            // Generar coordenadas aleatorias dentro de márgenes para que no
-            // interfiera con el contenido principal.  Usamos unidades de
-            // viewport para adaptarnos a distintos tamaños de pantalla.
-            const top = Math.random() * 60 + 10;    // 10% a 70% de altura
-            const left = Math.random() * 70 + 5;    // 5% a 75% de ancho
-            sticker.style.top = top + 'vh';
-            sticker.style.left = left + 'vw';
-            // Reiniciar otras posiciones que puedan haber quedado definidas
-            sticker.style.right = 'auto';
-            sticker.style.bottom = 'auto';
-            // Hacer visible la burbuja
-            sticker.style.opacity = 1;
-        });
-    }
-    // Realizar la primera asignación inmediata
-    randomizeStickers();
-    // Establecer un intervalo para que cada 15 segundos se oculten y
-    // reaparezcan en posiciones y con mensajes distintos
-    setInterval(() => {
-        // Ocultar gradualmente
-        stickers.forEach(sticker => {
-            sticker.style.opacity = 0;
-        });
-        // Después de 1 segundo (justo tras la transición), reposicionar y
-        // mostrar de nuevo
-        setTimeout(() => {
-            randomizeStickers();
-        }, 1000);
-    }, 15000);
-})();
+// Las animaciones de stickers flotantes fueron eliminadas.  Se mantiene
+// el resto del script sin cambios para asegurar que las secciones
+// sigan animándose al entrar en vista y que el asistente virtual
+// funcione correctamente.
